@@ -64,8 +64,6 @@ app.post('/api/users', (req, res) => {
     fs.writeFile('./MOCK_DATA.json', JSON.stringify(users), (err, data) => {
         return res.json({ status: 'User added successfully', id: users.length + 1 });
        });
-
-    
 });
 
 app.listen(PORT, () => console.log(`Server is running on port ${PORT}`));
